@@ -9,5 +9,19 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  
+  modules: ['nuxt-aos', '@nuxtjs/i18n'],
+  aos: {
+    disable: 'mobile',
+    startEvent: 'DOMContentLoaded',
+    offset: 120,
+    delay: 0, 
+    duration: 800, 
+    easing: 'ease-in-out',
+    once: true, 
+    mirror: false, 
+    anchorPlacement: 'top-bottom'
+  },
+  i18n: {
+    vueI18n: './i18n/i18n.config.ts'
+  },
 })
