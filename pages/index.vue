@@ -9,7 +9,7 @@
       }"
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
-      <header class="p-6 !w-full" data-aos="fade-down" data-aos-delay="100">
+      <header class="p-6 !w-full">
         <div class="container mx-auto flex justify-between items-center">
           <h1 class="text-4xl font-bold text-primary">
             {{ $t("adrar-systems") }}
@@ -40,11 +40,7 @@
           </nav>
         </div>
       </header>
-      <section
-        class="relative bg-cover bg-center h-[600px] !w-full"
-        data-aos="fade-down"
-        data-aos-delay="200"
-      >
+      <section class="relative bg-cover bg-center h-[600px] !w-full">
         <div
           class="container mx-auto text-center text-white relative z-10 py-24"
         >
@@ -156,12 +152,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section
-      id="pricing"
-      class="py-20 bg-dark !w-full"
-      data-aos="fade-up"
-      data-aos-delay="1000"
-    >
+    <section id="pricing" class="py-20 bg-dark !w-full">
       <div class="container mx-auto text-center">
         <h2 class="text-3xl font-bold text-primary mb-6">
           {{ $t("our-pricing") }}
@@ -235,12 +226,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section
-      id="contact"
-      class="py-20 bg-light !w-full"
-      data-aos="fade-up"
-      data-aos-delay="1400"
-    >
+    <section id="contact" class="py-20 bg-light !w-full">
       <div class="container mx-auto text-center">
         <h2 class="text-3xl font-bold text-primary mb-6">
           {{ $t("contact-us") }}
