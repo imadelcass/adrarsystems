@@ -77,39 +77,17 @@
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           <div
+            v-for="(service, index) in services"
+            :key="index"
             class="bg-dark-100 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all"
             data-aos="zoom-in"
-            data-aos-delay="400"
+            :data-aos-delay="service.aosDelay"
           >
             <h3 class="text-2xl font-semibold text-primary">
-              {{ $t("web-development") }}
+              {{ $t(service.title) }}
             </h3>
             <p class="text-gray-300 mt-4">
-              {{ $t("custom-websites-and-applications") }}
-            </p>
-          </div>
-          <div
-            class="bg-dark-100 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all"
-            data-aos="zoom-in"
-            data-aos-delay="500"
-          >
-            <h3 class="text-2xl font-semibold text-primary">
-              {{ $t("app-development") }}
-            </h3>
-            <p class="text-gray-300 mt-4">
-              {{ $t("mobile-apps-for-seamless-experience") }}
-            </p>
-          </div>
-          <div
-            class="bg-dark-100 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all"
-            data-aos="zoom-in"
-            data-aos-delay="600"
-          >
-            <h3 class="text-2xl font-semibold text-primary">
-              {{ $t("cloud-solutions") }}
-            </h3>
-            <p class="text-gray-300 mt-4">
-              {{ $t("scalable-cloud-solutions") }}
+              {{ $t(service.description) }}
             </p>
           </div>
         </div>
@@ -135,9 +113,9 @@
         >
           <div class="w-full max-w-sm md:w-1/2">
             <img
-              src="https://via.placeholder.com/500"
+              :src="teamImage"
               alt="{{ $t('about-us') }}"
-              class="rounded-lg shadow-lg w-full h-auto"
+              class="rounded-lg shadow-lg w-full h-64 object-cover"
               data-aos="fade-right"
               data-aos-delay="800"
             />
@@ -299,5 +277,25 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import heroImage from "~/assets/img/hero.jpg";
+import teamImage from "~/assets/img/team.jpg";
+
+const services = ref([
+  {
+    title: "web-development",
+    description: "custom-websites-and-applications",
+    aosDelay: 400,
+  },
+  {
+    title: "app-development",
+    description: "mobile-apps-for-seamless-experience",
+    aosDelay: 500,
+  },
+  {
+    title: "cloud-solutions",
+    description: "scalable-cloud-solutions",
+    aosDelay: 600,
+  },
+]);
 </script>
